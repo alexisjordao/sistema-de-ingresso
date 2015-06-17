@@ -1,0 +1,12 @@
+FORMATO DO CHAIRS
+NUMERO DE TIPOS
+TIPO
+MULTIPLICADOR DO PREÇO (PORCENTAGEM)
+LINHA PARA PULAR
+NOME DA LINHA OCUPAÇÃO+TIPO ESPAÇO VAZIO
+ESPAÇO VAZIO HORIZONTAL
+
+LEGENDA:
+s - espaço vazio vertical
+hspace - espaço vazio na horizontal
+0A - cadeira vazia do tipo A

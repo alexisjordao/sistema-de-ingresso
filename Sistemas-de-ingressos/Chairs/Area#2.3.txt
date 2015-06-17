@@ -1,0 +1,19 @@
+3
+A 1.2
+B 1.1 
+C 1
+Skipline
+A A0 A0 A0 A0 s s s A0 A0 A0 A0 A0 A0 s s s A0 A0 A0 A0
+B A0 A0 A0 A0 s s s A0 A0 A0 A0 A0 A0 s s s A0 A0 A0 A0
+C A0 A0 A0 A0 s s s A0 A0 A0 A0 A0 A0 s s s A0 A0 A0 A0
+hspace
+D B0 B0 B0 B0 s s s B0 B0 B0 B0 B0 B0 s s s B0 B0 B0 B0
+E B0 B0 B0 B0 s s s B0 B0 B0 B0 B0 B0 s s s B0 B0 B0 B0
+F B0 B0 B0 B0 s s s B0 B0 B0 B0 B0 B0 s s s B0 B0 B0 B0
+G B0 B0 B0 B0 s s s B0 B0 B0 B0 B0 B0 s s s B0 B0 B0 B0
+H B0 B0 B0 B0 s s s B0 B0 B0 B0 B0 B0 s s s B0 B0 B0 B0
+I B0 B0 B0 B0 s s s B0 B0 B0 B0 B0 B0 s s s B0 B0 B0 B0
+hspace
+J C0 C0 C0 C0 s s s C0 C0 C0 C0 C0 C0 s s s C0 C0 C0 C0
+K C0 C0 C0 C0 s s s C0 C0 C0 C0 C0 C0 s s s C0 C0 C0 C0
+L C0 C0 C0 C0 s s s C0 C0 C0 C0 C0 C0 s s s C0 C0 C0 C0
