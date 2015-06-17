@@ -1,0 +1,85 @@
+READ ME - ATENÇÃO!!!
+
+======================================================================================================
+
+TÓPICO I. Instruções de execução do código.
+
+Para executar o código basta compilar com qualquer compilador java e clicar em executar.
+Ele flui da seguinte maneira:
+I. Primeiro você deve entrar com dois números representando, respectivamente, a apresentação e a hora escolhida. Ambos os números representaram a apresentação em ordem crescente, de cima pra baixo começando do 1. O mesmo vale para as horas que estam abaixo da mesma apresentação.
+
+II.Depois você deve escolher a linha e a coluna da cadeira, na qual você quer sentar. O código foi implementado de modo que apenas uma pessoa pode comprar 1 ticker por vez, logo, apenas uma cadeira poderá ser escolhida. A linha será representada por uma letra que estará disposta na lateral es-
+querda. Enquanto a coluna é representada por um número, indo da esquerda pra a direita sem contar com os espaços em branco.
+
+III. Por ultimo você escolher seu desconto e entra com o valor o qual deseja usar para pagar pelo ingresso. E então este será "impresso".
+
+======================================================================================================
+
+TÓPICO II. Layout dos arquivos lidos pelo pacote DATA.
+
+Obs.: O '-' no início das linhas representa a descrição do padrão, mas o caracter não está no padrão.
+
+I.PresentationTable.
+Seu padrão é simples:
+- descrição.
+- censura.
+- preço.
+- data(hora,hora,hora,..) data(hora,...)....
+
+II.Chairs
+Esse padrão é mais delicado, as primeiras linhas representão os tipos de cadeiras e seus multiplicadores do valor da apresentação (em porcentagem). Desta maneira:
+- quantidade de tipos
+- tipo Preço
+- tipo Preço
+...
+
+Enquanto as linhas abaixo dessas representam:
+- linha marcada como "Skipline" (apenas uma linha que representa a separação da parte anterior)
+- coluna tipo+booleano tipo+booleano s s s tipo+booleano
+- coluna tipo+booleano tipo+booleano s s s tipo+booleano
+- espaço horizontal
+- coluna tipo+booleano tipo+booleano s s s tipo+booleano
+...
+
+Legenda: s -> representa espaço vertical
+         tipo+booleano -> representa o tipo da cadeira, mas um numero
+indicando se ela está vendida ou não. ex.:(A0 - cadeira tipo A, vaga).
+         Coluna -> Letra que representa a coluna.
+
+======================================================================================================
+
+TÓPICO III. Alterações finais no código.
+
+Antes de enviar o código ele foi alterado para melhorar um pouco o seu error Handling. Como:
+I. A questão do troco negativo foi concertada.
+II. IndexOutOfBounds durante a escolha de apresentação está sendo tratada.
+III. Qualquer exception na escolha da cadeira está sendo tratada.
+
+Erros os quais foram notados e não estão sendo tratados:
+I. MisusedTypeException (ou algo assim), gerado quando tenta-se usar uma String no lugar de um inteiro para escolher a apresentação, por exemplo.
+
+======================================================================================================
+
+TÓPICO IV. Algumas notas sobre "Pontos Fléxiveis".
+
+As seguintes observações podem ser feitas sobre os pontos flexíveis:
+
+I. Na classe time pode ser adicionado o atributo ROOM, na instancia de cinema principalmente, ao extende-lá. Mesmo que esse seja adicionado não haverá problemas com o desenrolar do código, bastando apenas trocar as intancias da classe tempo por sua extensão. O atributo será usado realmente apenas na classe TicketPrinter que usa o padrão Strategy.
+
+II. A classe TicketPrinter usa o padrão strategy para permitir ao usuário do framework imprimir o ticket com a combinação que ele quiser.
+
+III. A classe Chair, assim como a classe tempo pode ser extendida para adicionar o atributo GATE, quando na instancia de futebol. Esse atributo, assim como na classe time, não influenciaria no código e apenas seria algo a mais para ser impresso na classe print class.
+
+IV. A classe TicketValueCalculator pode ser usada para calcular os valores dos tickets diferentemente dependendo da instancia. Por exemplo, ela podia ser usada para calcular o valor que difere semanalmente no cinema (quartas mais baratas, por exemplo).
+
+V. O factory method presente no TicketManager pode ser usado para complementar o strategy do TicketValueCalculator, perimitindo adicionar a ele qualquer tipo de ticket através de passagem por parametro.
+
+VI. Por último, havia esquecido de comentar nas classes do DATA, as quais devem ser modicadas caso queira-se adicionar alguma própriedade como a ROOM ou a GATE mencionadas antes, já que todas as informações vendo dos arquivos. Mas pode-se colocar um BD ou uma cache no lugar.
+
+======================================================================================================
+
+TÓPICO V. Observações finais.
+
+Não foram implementados nesse trabalho, o strategy do TicketPrinter, já que este veio de última hora. Nem o storeArea() da classe AreaStore, já que este havia sido deixado para o fim.
+
+======================================================================================================
